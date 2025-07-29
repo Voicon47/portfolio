@@ -16,6 +16,7 @@ import type { Project } from "@/types"
 import { useState } from "react"
 import { cn } from "@/lib/utils"
 
+
 interface ProjectsSectionProps {
   projects: Project[]
 }
@@ -98,21 +99,22 @@ function ProjectsSection({ projects }: ProjectsSectionProps) {
         </motion.div>
 
         {/* Projects Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
-          <AnimatePresence mode="wait">
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={selectedCategory}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+          >
             {filteredProjects.map((project) => (
               <motion.div key={project.id} variants={itemVariants} layout className="group">
                 <VercelCard interactive className="h-full overflow-hidden" onClick={() => setSelectedProject(project)}>
                   {/* Project Image */}
                   <div className="relative aspect-video overflow-hidden rounded-t-lg">
                     <Image
-                      src={project.imageUrl || "/placeholder.svg"}
+                      src={project.imageUrl || "../placeholder.svg"}
                       alt={project.title}
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -172,8 +174,8 @@ function ProjectsSection({ projects }: ProjectsSectionProps) {
                 </VercelCard>
               </motion.div>
             ))}
-          </AnimatePresence>
-        </motion.div>
+          </motion.div>
+        </AnimatePresence>
 
         {/* Project Modal */}
         <AnimatePresence>
