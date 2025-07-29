@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Sofia Pro Regular'), url('/fonts/Sofia Pro Regular Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Sofia Pro Italic'), url('/fonts/Sofia Pro Regular Italic Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 200;
+  src: local('Sofia Pro ExtraLight'), url('/fonts/Sofia Pro ExtraLight Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: italic;
+  font-weight: 200;
+  src: local('Sofia Pro ExtraLight Italic'), url('/fonts/Sofia Pro ExtraLight Italic Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Sofia Pro UltraLight'), url('/fonts/Sofia Pro UltraLight Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: italic;
+  font-weight: 100;
+  src: local('Sofia Pro UltraLight Italic'), url('/fonts/Sofia Pro UltraLight Italic Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Sofia Pro Light'), url('/fonts/Sofia Pro Light Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Sofia Pro Light Italic'), url('/fonts/Sofia Pro Light Italic Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Sofia Pro Medium'), url('/fonts/Sofia Pro Medium Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: italic;
+  font-weight: 500;
+  src: local('Sofia Pro Medium Italic'), url('/fonts/Sofia Pro Medium Italic Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Sofia Pro SemiBold'), url('/fonts/Sofia Pro Semi Bold Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Sofia Pro SemiBold Italic'), url('/fonts/Sofia Pro Semi Bold Italic Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Sofia Pro Bold'), url('/fonts/Sofia Pro Bold Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: italic;
+  font-weight: 700;
+  src: local('Sofia Pro Bold Italic'), url('/fonts/Sofia Pro Bold Italic Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: normal;
+  font-weight: 900;
+  src: local('Sofia Pro Black'), url('/fonts/Sofia Pro Black Az.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Pro';
+  font-style: italic;
+  font-weight: 900;
+  src: local('Sofia Pro Black Italic'), url('/fonts/Sofia Pro Black Italic Az.woff') format('woff');
+}
+
+@layer base {
+  :root {
+    /* Light Mode */
+    --background: 0 0% 100%;
+    /* White */
+    --foreground: 0 0% 3.9%;
+    /* Near Black */
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 15%;
+    /* Dark Gray for primary actions */
+    --primary-foreground: 0 0% 98%;
+    /* Off-white */
+    --secondary: 0 0% 96.1%;
+    /* Light Gray */
+    --secondary-foreground: 0 0% 9%;
+    /* Dark Gray */
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    /* Medium Gray */
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    /* Red */
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    /* Light Gray border */
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 15%;
+    /* Dark Gray ring */
+    --radius: 0.75rem;
+    --success: 142.1 76.2% 36.3%;
+    /* Green */
+    --warning: 48.4 95.3% 50.5%;
+    /* Yellow */
+    --error: 0 84.2% 60.2%;
+    /* Red */
+
+    /* Gradient text colors for light mode */
+    --gradient-text-start: 0 0% 15%;
+    /* Dark Gray */
+    --gradient-text-end: 0 0% 40%;
+    /* Medium Dark Gray */
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    /* Near Black */
+    --foreground: 0 0% 98%;
+    /* Off-white */
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 85%;
+    /* Light Gray for primary actions */
+    --primary-foreground: 0 0% 9%;
+    /* Dark Gray */
+    --secondary: 0 0% 14.9%;
+    /* Dark Gray */
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 80%;
+    /* Lighter gray for better contrast in dark mode */
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 20%;
+    /* Darker Gray border */
+    --input: 0 0% 20%;
+    --ring: 0 0% 85%;
+    --success: 142.1 76.2% 36.3%;
+    /* Green */
+    --warning: 48.4 95.3% 50.5%;
+    /* Yellow */
+    --error: 0 62.8% 30.6%;
+    /* Red */
+
+    /* Gradient text colors for dark mode */
+    --gradient-text-start: 0 0% 90%;
+    /* Very Light Gray */
+    --gradient-text-end: 0 0% 70%;
+    /* Medium Light Gray */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--accent);
+  /* Use accent for scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted-foreground);
+  /* Use muted-foreground for scrollbar thumb */
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--foreground);
+  /* Use foreground for scrollbar thumb hover */
+}
