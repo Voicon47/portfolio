@@ -3,29 +3,34 @@ import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/contexts/theme-context"
-import { Header } from "@/components/layout/header"
 import { Footer } from "@/components/layout/footer"
+import { Header } from "../components/layout/header"
+import Particles from "@/components/others/Particles"
+import ElasticCursor from "@/components/others/ElasticCursor"
+import Preloader from "@/components/others/preloader"
+
+Header
 
 
 export const metadata: Metadata = {
-  title: "Alex Johnson - Full-Stack Developer & Designer",
+  title: "Perry Dinh - Full-Stack Developer & Traveler",
   description:
-    "Passionate full-stack developer with 6+ years of experience creating scalable web applications and intuitive user experiences.",
+    "Passionate full-stack developer with experience creating scalable web applications and intuitive user experiences.",
   keywords: ["Full-Stack Developer", "React", "Next.js", "UI/UX Designer", "Web Development"],
-  authors: [{ name: "Alex Johnson" }],
-  creator: "Alex Johnson",
+  authors: [{ name: "Perry Dinh" }],
+  creator: "Perry Dinh",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://alexjohnson.dev",
-    title: "Alex Johnson - Full-Stack Developer & Designer",
+    url: "https://perrydinh.id.vn",
+    title: "Perry Dinh - Full-Stack Developer & Designer",
     description:
       "Passionate full-stack developer with 6+ years of experience creating scalable web applications and intuitive user experiences.",
-    siteName: "Alex Johnson Portfolio",
+    siteName: "Perry Dinh Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Alex Johnson - Full-Stack Developer & Designer",
+    title: "Perry Dinh - Full-Stack Developer & Designer",
     description:
       "Passionate full-stack developer with 6+ years of experience creating scalable web applications and intuitive user experiences.",
     creator: "@alexjohnson",
@@ -53,11 +58,18 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider defaultTheme="system" storageKey="portfolio-theme">
-          <div className="flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1">{children}</main>
-            <Footer />
-          </div>
+          <Particles
+            className="fixed inset-0 -z-10 animate-fade-in"
+            quantity={100}
+          />
+          <Preloader>
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <ElasticCursor />
+              {/* <main className="flex-1">{children}</main> */}
+              {/* <Footer /> */}
+            </div>
+          </Preloader>
         </ThemeProvider>
       </body>
     </html>

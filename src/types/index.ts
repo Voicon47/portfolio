@@ -35,6 +35,7 @@ export interface ContactFormData {
 export interface PersonalInfo {
   name: string
   title: string
+  logo: string
   bio: string
   location: string
   email: string

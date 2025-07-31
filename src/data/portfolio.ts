@@ -3,6 +3,7 @@ import type { Project, SkillCategory, PersonalInfo, NavigationItem } from "@/typ
 export const personalInfo: PersonalInfo = {
   name: "Alex Johnson",
   title: "Full-Stack Developer & UI/UX Designer",
+  logo: "/images/logo.svg",
   bio: "Passionate full-stack developer with 6+ years of experience creating scalable web applications and intuitive user experiences. I specialize in React, Node.js, and modern web technologies, with a keen eye for design and performance optimization.",
   location: "San Francisco, CA",
   email: "alex.johnson@example.com",

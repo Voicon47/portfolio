@@ -9,10 +9,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Explicitly set experimental appDir to false and use src directory
-  experimental: {
-    appDir: true,
-  },
 }
 
 export default nextConfig
