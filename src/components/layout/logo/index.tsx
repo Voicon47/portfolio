@@ -66,18 +66,18 @@ export function AnimatedLogo() {
           src={personalInfo.logo}
           alt="Logo"
           className="h-20 w-20"
-          whileHover={{
-            rotate: 360,
-            scale: 1.1,
-            transition: {
-              duration: 0.8,
-              ease: "easeInOut"
-            }
-          }}
+        // whileHover={{
+        //   rotate: 360,
+        //   scale: 1.1,
+        //   transition: {
+        //     duration: 0.8,
+        //     ease: "easeInOut"
+        //   }
+        // }}
         />
 
         {/* Animated Logo Text */}
-        <motion.span
+        {/* <motion.span
           variants={logoTextVariants}
           transition={{
             duration: 1.2,
@@ -87,9 +87,9 @@ export function AnimatedLogo() {
           className="text-xl font-semibold text-foreground bg-gradient-to-r from-primary to-primary/70 bg-clip-text leading-tight hover:underline hover:underline-offset-4 decoration-[3px]"
         >
           {personalInfo.name.split(" ")[0]}
-          {/* <br />
-          {personalInfo.name.split(" ")[1]} */}
-        </motion.span>
+          <br />
+          {personalInfo.name.split(" ")[1]}
+        </motion.span> */}
       </Link>
     </motion.div>
   )

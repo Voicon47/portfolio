@@ -61,11 +61,10 @@ export function NavigationMenu(props: NavigationMenuProps) {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: index * 0.1 + 0.5 }}
-          whileHover={{ scale: 1.05 }}
         >
           <Link
             href={item.href}
-            className="text-xl font-semibold leading-none hover:text-muted-foreground text-foreground transition-colors relative group"
+            className="text-xl font-semibold leading-none  text-foreground transition-colors relative group cursor-can-hover"
             onClick={(e) => handleNavClick(e, item.href)}
           >
             {item.label}

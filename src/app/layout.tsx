@@ -8,6 +8,7 @@ import { Header } from "../components/layout/header"
 import Particles from "@/components/others/Particles"
 import ElasticCursor from "@/components/others/ElasticCursor"
 import Preloader from "@/components/others/preloader"
+import CardPortfolio from "@/components/others/cardPortfolio"
 
 Header
 
@@ -65,8 +66,9 @@ export default function RootLayout({
           <Preloader>
             <div className="flex min-h-screen flex-col">
               <Header />
+              <CardPortfolio />
               <ElasticCursor />
-              {/* <main className="flex-1">{children}</main> */}
+              <main className="flex-1">{children}</main>
               {/* <Footer /> */}
             </div>
           </Preloader>

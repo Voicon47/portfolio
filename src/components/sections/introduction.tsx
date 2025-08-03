@@ -5,12 +5,14 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { ArrowDown, Github, Linkedin, Mail, MapPin } from "lucide-react"
 import type { PersonalInfo } from "@/types"
+import CardPortfolio from "../others/cardPortfolio"
+
 
 interface HeroSectionProps {
   personalInfo: PersonalInfo
 }
 
-function HeroSection({ personalInfo }: HeroSectionProps) {
+function Introduction({ personalInfo }: HeroSectionProps) {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -113,7 +115,7 @@ function HeroSection({ personalInfo }: HeroSectionProps) {
           </div>
 
           {/* Profile Image */}
-          <motion.div variants={itemVariants} className="flex-shrink-0">
+          {/* <motion.div variants={itemVariants} className="flex-shrink-0">
             <motion.div whileHover={{ scale: 1.05 }} className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary rounded-full blur-2xl opacity-20 animate-pulse" />
               <Image
@@ -125,7 +127,7 @@ function HeroSection({ personalInfo }: HeroSectionProps) {
                 priority
               />
             </motion.div>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Scroll Indicator */}
@@ -144,4 +146,4 @@ function HeroSection({ personalInfo }: HeroSectionProps) {
   )
 }
 
-export default HeroSection
+export default Introduction

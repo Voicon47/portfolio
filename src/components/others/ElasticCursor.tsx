@@ -203,14 +203,14 @@ function ElasticCursor() {
           backdropFilter: "invert(100%)",
         }}
       ></div>
-      <div
+      {/* <div
         className="w-3 h-3 rounded-full fixed translate-x-[-50%] translate-y-[-50%] pointer-events-none transition-none duration-300"
         style={{
           top: y,
           left: x,
           backdropFilter: "invert(100%)",
         }}
-      ></div>
+      ></div> */}
     </>
   );
 }

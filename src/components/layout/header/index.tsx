@@ -49,7 +49,7 @@ export function Header() {
   const { isMobileMenuOpen, toggleMobileMenu, closeMobileMenu } = useMobileMenu()
 
   const headerClasses = cn(
-    "fixed top-0 z-50 w-full transition-all duration-300",
+    " z-50 w-full transition-all duration-300",
     isScrolled
       ? "bg-background/80 backdrop-blur-md shadow-lg border-b border-border"
       : "bg-transparent"
@@ -62,7 +62,7 @@ export function Header() {
       animate="animate"
       className={headerClasses}
     >
-      <div className="container mx-auto px-4 py-2">
+      <div className="container mx-auto px-4 py-5 ">
         <div className="flex items-center justify-between">
           {/* Logo Section */}
           <AnimatedLogo />
@@ -71,10 +71,10 @@ export function Header() {
           <NavigationMenu />
 
           {/* Header Actions */}
-          {/* <HeaderActions
+          <HeaderActions
             isMobileMenuOpen={isMobileMenuOpen}
             onMobileMenuToggle={toggleMobileMenu}
-          /> */}
+          />
         </div>
 
         {/* Mobile Menu */}

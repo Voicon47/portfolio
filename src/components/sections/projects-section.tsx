@@ -55,7 +55,7 @@ function ProjectsSection({ projects }: ProjectsSectionProps) {
   }
 
   return (
-    <section id="projects" className="py-20 bg-accent">
+    <section id="projects" className="py-20">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <motion.div

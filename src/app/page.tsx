@@ -6,6 +6,7 @@ import SkillsSection from "@/components/sections/skills-section" // Changed to d
 import ProjectsSection from "@/components/sections/projects-section" // Changed to default import
 import ContactSection from "@/components/sections/contact-section" // Changed to default import
 import { personalInfo, skillCategories, projects } from "@/data/portfolio-data"
+import Introduction from "@/components/sections/introduction"
 
 export default function Portfolio() {
   return (
@@ -15,10 +16,11 @@ export default function Portfolio() {
       transition={{ duration: 0.5 }}
       className="min-h-screen bg-[rgb(var(--vercel-bg))]"
     >
-      <HeroSection personalInfo={personalInfo} />
+      <Introduction personalInfo={personalInfo} />
+      {/* <HeroSection personalInfo={personalInfo} /> */}
       <ProjectsSection projects={projects} />
-      <SkillsSection skillCategories={skillCategories} />
-      <ContactSection personalInfo={personalInfo} />
+      {/* <SkillsSection skillCategories={skillCategories} />
+      <ContactSection personalInfo={personalInfo} /> */}
     </motion.div>
   )
 }
