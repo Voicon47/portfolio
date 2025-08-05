@@ -17,10 +17,9 @@ export default function Portfolio() {
       className="min-h-screen bg-[rgb(var(--vercel-bg))]"
     >
       <Introduction personalInfo={personalInfo} />
-      {/* <HeroSection personalInfo={personalInfo} /> */}
       <ProjectsSection projects={projects} />
-      {/* <SkillsSection skillCategories={skillCategories} />
-      <ContactSection personalInfo={personalInfo} /> */}
+      <SkillsSection skillCategories={skillCategories} />
+      <ContactSection personalInfo={personalInfo} />
     </motion.div>
   )
 }

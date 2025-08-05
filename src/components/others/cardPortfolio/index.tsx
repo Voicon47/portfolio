@@ -34,7 +34,7 @@ const rapierToThreeVector = (v: { x: number; y: number; z: number }) => {
 
 export default function CardPortfolio() {
   return (
-    <motion.div className='absolute inset-0 z-50'>
+    <motion.div className='absolute inset-0 z-10'>
       <Canvas camera={{ position: [0, 0, 13], fov: 25 }}>
         <ambientLight intensity={Math.PI} />
         <Physics interpolate gravity={[0, -40, 0]} timeStep={1 / 60}>

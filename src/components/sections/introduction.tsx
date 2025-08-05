@@ -40,12 +40,12 @@ function Introduction({ personalInfo }: HeroSectionProps) {
   ]
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden max-w-[70%]">
       <motion.div
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="container relative z-10 mx-auto px-4 py-20"
+        className=" relative z-0 mx-auto px-4 py-20"
       >
         <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
           {/* Content */}
